@@ -13,3 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt && \
     rm -rf /tmp/*
 
 USER gitpod
+
+RUN git config --global --add safe.directory '*'
