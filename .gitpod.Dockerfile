@@ -1,7 +1,6 @@
 FROM dwavesys/leapide:latest-v2-prod
 
 USER root
-WORKDIR /app
 
 RUN apt update && \
     apt install -yq --no-install-recommends \
