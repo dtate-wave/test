@@ -2,6 +2,8 @@ FROM dwavesys/leapide:latest-v2-prod
 
 USER root
 
+RUN git config --global --add safe.directory '*'
+
 RUN apt update && \
     apt install -yq --no-install-recommends \
     nodejs \
@@ -13,5 +15,3 @@ RUN pip install --no-cache-dir -r requirements.txt && \
     rm -rf /tmp/*
 
 USER gitpod
-
-RUN git config --global --add safe.directory '*'
