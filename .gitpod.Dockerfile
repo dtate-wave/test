@@ -2,6 +2,8 @@ FROM dwavesys/leapide:latest-v2-prod
 
 USER root
 
+RUN git config --global --add safe.directory /workspace/init
+
 RUN apt update && \
     apt install -yq --no-install-recommends \
     nodejs \
